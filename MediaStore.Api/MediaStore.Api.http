@@ -1,0 +1,7 @@
+@MediaStore.Api_HostAddress = http://localhost:5110
+
+// todo!!1
+GET {{MediaStore.Api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,23 @@
+﻿using MediaStore.Api.Common;
+using MediaStore.Api.Domain;
+
+namespace MediaStore.Api.Features.Products.CreateProduct;
+
+public static class CreateProductEndpoint
+{
+    public static void MapCreateProduct(this IEndpointRouteBuilder app)
+    {
+        app.MapPost("/api/products", async (CreateProductRequest req, IProductRepository repo, CancellationToken ct) =>
+        {
+            var price = decimal.Parse(req.Price!, System.Globalization.CultureInfo.InvariantCulture);
+            var product = new Product(Guid.NewGuid(), req.Code!, req.Name!, price);
+
+            var result = await repo.AddAsync(product, ct);
+
+            return result.IsSuccess
+                ? Results.Created($"/api/products/{product.Id}", product)
+                : result.ToProblemDetails(propertyName: nameof(product.Code));
+        })
+        .AddEndpointFilter<ValidationFilter<CreateProductRequest>>();
+    }
+}
