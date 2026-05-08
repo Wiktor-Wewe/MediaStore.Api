@@ -2,15 +2,10 @@ using FluentValidation;
 using MediaStore.Api.Features.Products.CreateProduct;
 using MediaStore.Api.Features.Products.GetProducts;
 using MediaStore.Api.Infrastructure;
+using MediaStore.Api.Infrastructure.Configuration;
 using Scalar.AspNetCore;
-using System.Text.Json.Serialization;
 
 var builder = WebApplication.CreateBuilder(args);
-
-// fix problem while someone try to send "" as decimal
-builder.Services.ConfigureHttpJsonOptions(options => {
-    options.SerializerOptions.NumberHandling = JsonNumberHandling.AllowReadingFromString;
-});
 
 builder.Services.AddPersistence(builder.Configuration);
 builder.Services.AddValidatorsFromAssemblyContaining<Program>();
@@ -19,11 +14,18 @@ builder.Services.AddValidatorsFromAssemblyContaining<Program>();
 builder.Services.AddOpenApi();
 
 // CORS
+builder.Services.Configure<CorsSettings>(
+    builder.Configuration.GetSection("Cors"));
+
+var corsSettings = builder.Configuration
+    .GetSection("Cors")
+    .Get<CorsSettings>() ?? new CorsSettings();
+
 builder.Services.AddCors(options =>
 {
     options.AddDefaultPolicy(policy =>
     {
-        policy.AllowAnyOrigin()
+        policy.WithOrigins(corsSettings.AllowedOrigins)
               .AllowAnyHeader()
               .AllowAnyMethod();
     });
@@ -43,7 +45,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-//app.UseAuthorization();
+//app.UseAuthorization(); // TODO
 
 app.UseCors();
 

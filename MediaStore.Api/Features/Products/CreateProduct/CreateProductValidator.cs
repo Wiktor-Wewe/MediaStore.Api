@@ -1,4 +1,5 @@
 ﻿using FluentValidation;
+using MediaStore.Api.Domain.Errors;
 
 namespace MediaStore.Api.Features.Products.CreateProduct;
 
@@ -8,17 +9,18 @@ public class CreateProductValidator : AbstractValidator<CreateProductRequest>
     {
         RuleFor(x => x.Code)
             .NotEmpty()
+            .WithMessage(ProductErrors.CodeRequired)
             .MaximumLength(10)
-            .WithMessage("Error.Product.Code");
+            .WithMessage(ProductErrors.CodeMaxLength);
 
         RuleFor(x => x.Name)
             .NotEmpty()
+            .WithMessage(ProductErrors.NameRequired)
             .MaximumLength(100)
-            .WithMessage("Error.Product.Name");
+            .WithMessage(ProductErrors.NameMaxLength);
 
         RuleFor(x => x.Price)
-            .NotEmpty()
-            .Must(x => decimal.TryParse(x, out var val) && val > 0)
-            .WithMessage("Error.Product.Price");
+            .GreaterThan(0)
+            .WithMessage(ProductErrors.PriceGreaterThanZero);
     }
 }

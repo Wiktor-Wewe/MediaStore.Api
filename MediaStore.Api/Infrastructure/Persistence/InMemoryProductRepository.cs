@@ -1,4 +1,5 @@
 ﻿using MediaStore.Api.Domain;
+using MediaStore.Api.Domain.Errors;
 using System.Collections.Concurrent;
 
 namespace MediaStore.Api.Infrastructure.Persistence;
@@ -11,16 +12,20 @@ public class InMemoryProductRepository : IProductRepository
     public Task<IReadOnlyCollection<Product>> GetAllAsync(CancellationToken ct)
         => Task.FromResult<IReadOnlyCollection<Product>>(_products.Values.ToList().AsReadOnly());
 
-    public async Task<Result> AddAsync(Product product, CancellationToken ct)
+    public Task<Result> AddAsync(Product product, CancellationToken ct)
     {
         // Thread-Safety
         if (!_codeIndex.TryAdd(product.Code, product.Id))
         {
-            return Result.Failure("Error.Product.CodeAlreadyExists");
+            return Task.FromResult(Result.Failure(ProductErrors.CodeAlreadyExists));
         }
 
-        _products.TryAdd(product.Id, product);
+        if (!_products.TryAdd(product.Id, product))
+        {
+            _codeIndex.TryRemove(product.Code, out _);
+            return Task.FromResult(Result.Failure(ProductErrors.CreateFailed));
+        }
 
-        return Result.Success();
+        return Task.FromResult(Result.Success());
     }
 }
