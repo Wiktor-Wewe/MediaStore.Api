@@ -7,7 +7,6 @@ public static class CreateProductEndpoint
 {
     public static void MapCreateProduct(this IEndpointRouteBuilder app)
     {
-        // TODO add pagination
         app.MapPost("/api/products", async (CreateProductRequest req, IProductRepository repo, CancellationToken ct) =>
         {
             var price = req.Price;

@@ -9,8 +9,50 @@ public class InMemoryProductRepository : IProductRepository
     private readonly ConcurrentDictionary<Guid, Product> _products = new();
     private readonly ConcurrentDictionary<string, Guid> _codeIndex = new(StringComparer.OrdinalIgnoreCase);
 
-    public Task<IReadOnlyCollection<Product>> GetAllAsync(CancellationToken ct)
-        => Task.FromResult<IReadOnlyCollection<Product>>(_products.Values.ToList().AsReadOnly());
+    public Task<PagedResult<Product>> GetPagedAsync(ProductQuery query, CancellationToken ct)
+    {
+        var products = _products.Values.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(query.Search))
+        {
+            var search = query.Search.Trim();
+
+            products = products.Where(p =>
+                p.Code.Contains(search, StringComparison.OrdinalIgnoreCase) ||
+                p.Name.Contains(search, StringComparison.OrdinalIgnoreCase));
+        }
+
+        if (query.MinPrice.HasValue)
+            products = products.Where(p => p.Price >= query.MinPrice.Value);
+
+        if (query.MaxPrice.HasValue)
+            products = products.Where(p => p.Price <= query.MaxPrice.Value);
+
+        products = query.SortBy switch
+        {
+            "code" => query.SortDirection == "desc"
+                ? products.OrderByDescending(p => p.Code)
+                : products.OrderBy(p => p.Code),
+
+            "price" => query.SortDirection == "desc"
+                ? products.OrderByDescending(p => p.Price)
+                : products.OrderBy(p => p.Price),
+
+            _ => query.SortDirection == "desc"
+                ? products.OrderByDescending(p => p.Name)
+                : products.OrderBy(p => p.Name)
+        };
+
+        var totalCount = products.Count();
+
+        var items = products
+            .Skip((query.PageNumber - 1) * query.PageSize)
+            .Take(query.PageSize)
+            .ToList()
+            .AsReadOnly();
+
+        return Task.FromResult(new PagedResult<Product>(items, totalCount));
+    }
 
     public Task<Result> AddAsync(Product product, CancellationToken ct)
     {
