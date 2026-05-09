@@ -15,4 +15,10 @@ public static class AuthErrors
 
     public const string RegistrationDisabled = "Error.Auth.Registration.Disabled";
     public const string CreateFailed = "Error.Auth.CreateFailed";
+
+    public const string InvalidSortBy = "Error.Auth.User.SortBy.Invalid"; // move to pagination?
+    public const string InvalidSortDirection = "Error.Auth.User.SortDirection.Invalid"; // -||-
+
+    public const string CannotDeleteSelf = "Error.Auth.User.CannotDeleteSelf";
+    public const string CannotDeleteLastActiveAdmin = "Error.Auth.User.CannotDeleteLastActiveAdmin";
 }

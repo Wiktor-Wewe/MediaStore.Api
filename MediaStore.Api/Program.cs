@@ -1,7 +1,8 @@
 using FluentValidation;
-using MediaStore.Api.Domain;
 using MediaStore.Api.Features.Admin.ApproveUser;
-using MediaStore.Api.Features.Admin.GetPendingUsers;
+using MediaStore.Api.Features.Admin.DeleteUser;
+using MediaStore.Api.Features.Admin.GetRegistrationSettings;
+using MediaStore.Api.Features.Admin.GetUsers;
 using MediaStore.Api.Features.Admin.SetRegistrationEnabled;
 using MediaStore.Api.Features.Auth.Login;
 using MediaStore.Api.Features.Auth.Register;
@@ -10,7 +11,6 @@ using MediaStore.Api.Features.Products.GetProducts;
 using MediaStore.Api.Infrastructure;
 using MediaStore.Api.Infrastructure.Configuration;
 using MediaStore.Api.Infrastructure.OpenApi;
-using MediaStore.Api.Infrastructure.Persistence;
 using MediaStore.Api.Infrastructure.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -104,7 +104,10 @@ app.UseAuthorization();
 app.MapLogin();
 app.MapRegister();
 
-app.MapGetPendingUsers();
+app.MapGetUsers();
+app.MapDeleteUser();
+app.MapGetRegistrationSettings();
+
 app.MapApproveUser();
 app.MapSetRegistrationEnabled();
 

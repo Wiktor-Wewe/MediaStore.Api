@@ -12,9 +12,9 @@ public class InMemoryAuthRepository : IAuthRepository
 
     private bool _registrationEnabled = true;
 
+    // only for the purpose of the task (in memory)
     public InMemoryAuthRepository(PasswordHasher passwordHasher)
     {
-        // only for the purpose of the task (in memory)
         var admin = new User
         {
             Id = Guid.Parse("11111111-1111-1111-1111-111111111111"),
@@ -26,6 +26,47 @@ public class InMemoryAuthRepository : IAuthRepository
 
         _users.TryAdd(admin.Id, admin);
         _emailIndex.TryAdd(admin.Email, admin.Id);
+    }
+
+    public Task<PagedResult<User>> GetUsersAsync(UserQuery query, CancellationToken ct = default)
+    {
+        var users = _users.Values.AsQueryable();
+
+        if (!string.IsNullOrWhiteSpace(query.Email))
+        {
+            var email = query.Email.Trim();
+
+            users = users.Where(x =>
+                x.Email.Contains(email, StringComparison.OrdinalIgnoreCase));
+        }
+
+        if (query.Status.HasValue)
+            users = users.Where(x => x.Status == query.Status.Value);
+
+        users = query.SortBy switch
+        {
+            "email" => query.SortDirection == "desc"
+                ? users.OrderByDescending(x => x.Email)
+                : users.OrderBy(x => x.Email),
+
+            "status" => query.SortDirection == "desc"
+                ? users.OrderByDescending(x => x.Status)
+                : users.OrderBy(x => x.Status),
+
+            _ => query.SortDirection == "desc"
+                ? users.OrderByDescending(x => x.Email)
+                : users.OrderBy(x => x.Email)
+        };
+
+        var totalCount = users.Count();
+
+        var items = users
+            .Skip((query.PageNumber - 1) * query.PageSize)
+            .Take(query.PageSize)
+            .ToList()
+            .AsReadOnly();
+
+        return Task.FromResult(new PagedResult<User>(items, totalCount));
     }
 
     public Task<User?> GetByEmailAsync(string email, CancellationToken ct = default)
@@ -41,16 +82,6 @@ public class InMemoryAuthRepository : IAuthRepository
     {
         _users.TryGetValue(id, out var user);
         return Task.FromResult(user);
-    }
-
-    public Task<IReadOnlyCollection<User>> GetPendingUsersAsync(CancellationToken ct = default)
-    {
-        var users = _users.Values
-            .Where(x => x.Status == UserStatus.Pending)
-            .ToList()
-            .AsReadOnly();
-
-        return Task.FromResult<IReadOnlyCollection<User>>(users);
     }
 
     public Task<Result> AddAsync(User user, CancellationToken ct = default)
@@ -73,6 +104,33 @@ public class InMemoryAuthRepository : IAuthRepository
             return Task.FromResult(Result.Failure(AuthErrors.UserNotFound));
 
         user.Status = UserStatus.Active;
+        return Task.FromResult(Result.Success());
+    }
+
+    public Task<Result> DeleteAsync(Guid userId, Guid currentUserId, CancellationToken ct = default)
+    {
+        if (!_users.TryGetValue(userId, out var user))
+            return Task.FromResult(Result.Failure(AuthErrors.UserNotFound));
+
+        var activeAdminsCount = _users.Values.Count(x =>
+            x.Role == UserRole.Admin &&
+            x.Status == UserStatus.Active);
+
+        if (user.Role == UserRole.Admin &&
+            user.Status == UserStatus.Active &&
+            activeAdminsCount <= 1)
+        {
+            return Task.FromResult(Result.Failure(AuthErrors.CannotDeleteLastActiveAdmin));
+        }
+
+        if (userId == currentUserId)
+            return Task.FromResult(Result.Failure(AuthErrors.CannotDeleteSelf));
+
+        if (!_users.TryRemove(userId, out var removedUser))
+            return Task.FromResult(Result.Failure(AuthErrors.UserNotFound));
+
+        _emailIndex.TryRemove(removedUser.Email, out _);
+
         return Task.FromResult(Result.Success());
     }
 

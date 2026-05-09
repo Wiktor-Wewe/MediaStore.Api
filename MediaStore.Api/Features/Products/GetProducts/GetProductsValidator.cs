@@ -12,11 +12,11 @@ public class GetProductsValidator : AbstractValidator<GetProductsRequest>
     {
         RuleFor(x => x.PageNumber)
             .GreaterThan(0)
-            .WithMessage(ProductErrors.InvalidPageNumber);
+            .WithMessage(PaginationErrors.InvalidPageNumber);
 
         RuleFor(x => x.PageSize)
             .InclusiveBetween(1, 100)
-            .WithMessage(ProductErrors.InvalidPageSize);
+            .WithMessage(PaginationErrors.InvalidPageSize);
 
         RuleFor(x => x.MinPrice)
             .GreaterThanOrEqualTo(0)

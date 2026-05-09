@@ -12,8 +12,6 @@ public class ProductErrors
     public const string PriceGreaterThanZero = "Error.Product.Price.GreaterThanZero";
 
     // get products
-    public const string InvalidPageNumber = "Error.Pagination.PageNumber.Invalid"; // move to paginationErros.cs?
-    public const string InvalidPageSize = "Error.Pagination.PageSize.Invalid"; // -||-
     public const string InvalidMinPrice = "Error.Product.MinPrice.Invalid";
     public const string InvalidMaxPrice = "Error.Product.MaxPrice.Invalid";
     public const string InvalidPriceRange = "Error.Product.PriceRange.Invalid";
