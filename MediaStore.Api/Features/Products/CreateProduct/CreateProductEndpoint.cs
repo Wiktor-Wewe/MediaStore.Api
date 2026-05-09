@@ -18,6 +18,7 @@ public static class CreateProductEndpoint
                 ? Results.Created($"/api/products/{product.Id}", product)
                 : result.ToValidationProblem(propertyName: nameof(product.Code));
         })
+        .RequireAuthorization("AdminOnly")
         .AddEndpointFilter<ValidationFilter<CreateProductRequest>>();
     }
 }

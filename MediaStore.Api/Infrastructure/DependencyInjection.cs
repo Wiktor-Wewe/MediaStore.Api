@@ -10,10 +10,14 @@ public static class DependencyInjection
         var useInMemory = config.GetValue<bool>("DatabaseSettings:UseInMemory");
 
         if (useInMemory)
+        {
             services.AddSingleton<IProductRepository, InMemoryProductRepository>();
+            services.AddSingleton<IAuthRepository, InMemoryAuthRepository>();
+        }
         else
-            // todo AddDbContext and SqlProductRepository
+        {
             throw new NotImplementedException("SQL Server implementation not added yet.");
+        }
 
         return services;
     }
