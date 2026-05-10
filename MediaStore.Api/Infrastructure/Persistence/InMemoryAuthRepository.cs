@@ -13,6 +13,7 @@ public class InMemoryAuthRepository : IAuthRepository
     private bool _registrationEnabled = true;
 
     // only for the purpose of the task (in memory)
+    // move to dbInitializer?
     public InMemoryAuthRepository(PasswordHasher passwordHasher)
     {
         var admin = new User

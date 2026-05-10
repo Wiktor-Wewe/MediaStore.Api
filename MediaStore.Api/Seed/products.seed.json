@@ -58,5 +58,425 @@
       "de": "Ein Gaming-Laptop mit leistungsstarker Grafikkarte, schneller SSD und Display mit hoher Bildwiederholrate.",
       "cs": "Herní notebook s výkonnou grafickou kartou, rychlým SSD a displejem s vysokou obnovovací frekvencí."
     }
+  },
+  {
+    "code": "MS001",
+    "name": "Wireless Mouse",
+    "price": 129.99,
+    "imageUrl": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46",
+    "descriptions": {
+      "pl": "Bezprzewodowa mysz o ergonomicznym kształcie, precyzyjnym sensorze i długim czasie pracy na baterii.",
+      "en": "A wireless mouse with an ergonomic shape, precise sensor and long battery life.",
+      "de": "Eine kabellose Maus mit ergonomischer Form, präzisem Sensor und langer Akkulaufzeit.",
+      "cs": "Bezdrátová myš s ergonomickým tvarem, přesným senzorem a dlouhou výdrží baterie."
+    }
+  },
+  {
+    "code": "MN001",
+    "name": "4K Monitor 27",
+    "price": 1499.99,
+    "imageUrl": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf",
+    "descriptions": {
+      "pl": "Monitor 27 cali z rozdzielczością 4K, cienkimi ramkami i świetnym odwzorowaniem kolorów.",
+      "en": "A 27-inch 4K monitor with slim bezels and excellent color reproduction.",
+      "de": "Ein 27-Zoll-4K-Monitor mit schmalen Rändern und hervorragender Farbwiedergabe.",
+      "cs": "27palcový 4K monitor s tenkými rámečky a výborným podáním barev."
+    }
+  },
+  {
+    "code": "SP001",
+    "name": "Bluetooth Speaker",
+    "price": 299.99,
+    "imageUrl": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1",
+    "descriptions": {
+      "pl": "Przenośny głośnik Bluetooth z mocnym dźwiękiem, wodoodporną obudową i kompaktowym rozmiarem.",
+      "en": "A portable Bluetooth speaker with powerful sound, water-resistant housing and compact size.",
+      "de": "Ein tragbarer Bluetooth-Lautsprecher mit kräftigem Klang, wasserfestem Gehäuse und kompakter Größe.",
+      "cs": "Přenosný Bluetooth reproduktor se silným zvukem, voděodolným tělem a kompaktní velikostí."
+    }
+  },
+  {
+    "code": "TB001",
+    "name": "Tablet 10",
+    "price": 1399.00,
+    "imageUrl": "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0",
+    "descriptions": {
+      "pl": "Tablet 10 cali do pracy, nauki i rozrywki z jasnym ekranem oraz lekką konstrukcją.",
+      "en": "A 10-inch tablet for work, learning and entertainment with a bright display and lightweight design.",
+      "de": "Ein 10-Zoll-Tablet für Arbeit, Lernen und Unterhaltung mit hellem Display und leichtem Design.",
+      "cs": "10palcový tablet pro práci, učení i zábavu s jasným displejem a lehkou konstrukcí."
+    }
+  },
+  {
+    "code": "WC001",
+    "name": "Webcam Full HD",
+    "price": 199.99,
+    "imageUrl": "https://images.unsplash.com/photo-1587826080692-f439cd0b70da",
+    "descriptions": {
+      "pl": "Kamera internetowa Full HD z wbudowanym mikrofonem, idealna do wideokonferencji i nauki zdalnej.",
+      "en": "A Full HD webcam with built-in microphone, ideal for video meetings and remote learning.",
+      "de": "Eine Full-HD-Webcam mit integriertem Mikrofon, ideal für Videokonferenzen und Online-Unterricht.",
+      "cs": "Full HD webkamera s vestavěným mikrofonem, ideální pro videokonference a vzdálenou výuku."
+    }
+  },
+  {
+    "code": "CH001",
+    "name": "USB-C Charger 65W",
+    "price": 159.99,
+    "imageUrl": "https://images.unsplash.com/photo-1583863788434-e58a36330cf0",
+    "descriptions": {
+      "pl": "Kompaktowa ładowarka USB-C 65W do laptopów, smartfonów i tabletów z szybkim ładowaniem.",
+      "en": "A compact 65W USB-C charger for laptops, smartphones and tablets with fast charging support.",
+      "de": "Ein kompaktes 65W-USB-C-Ladegerät für Laptops, Smartphones und Tablets mit Schnellladefunktion.",
+      "cs": "Kompaktní 65W USB-C nabíječka pro notebooky, smartphony a tablety s podporou rychlého nabíjení."
+    }
+  },
+  {
+    "code": "SSD001",
+    "name": "External SSD 1TB",
+    "price": 449.99,
+    "imageUrl": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b",
+    "descriptions": {
+      "pl": "Zewnętrzny dysk SSD 1TB z szybkim transferem danych i wytrzymałą obudową.",
+      "en": "A 1TB external SSD with fast data transfer and durable housing.",
+      "de": "Eine externe 1TB-SSD mit schneller Datenübertragung und robustem Gehäuse.",
+      "cs": "Externí SSD disk 1TB s rychlým přenosem dat a odolným tělem."
+    }
+  },
+  {
+    "code": "CAM001",
+    "name": "Action Camera 4K",
+    "price": 899.00,
+    "imageUrl": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd",
+    "descriptions": {
+      "pl": "Kamera sportowa 4K z szerokim kątem nagrywania, stabilizacją obrazu i wodoodporną obudową.",
+      "en": "A 4K action camera with wide-angle recording, image stabilization and waterproof housing.",
+      "de": "Eine 4K-Action-Kamera mit Weitwinkelaufnahme, Bildstabilisierung und wasserdichtem Gehäuse.",
+      "cs": "4K akční kamera se širokoúhlým záznamem, stabilizací obrazu a vodotěsným tělem."
+    }
+  },
+  {
+    "code": "DR001",
+    "name": "Compact Drone",
+    "price": 1899.99,
+    "imageUrl": "https://images.unsplash.com/photo-1508614589041-895b88991e3e",
+    "descriptions": {
+      "pl": "Kompaktowy dron z kamerą, stabilnym lotem i trybami automatycznego nagrywania.",
+      "en": "A compact drone with a camera, stable flight and automatic recording modes.",
+      "de": "Eine kompakte Drohne mit Kamera, stabilem Flug und automatischen Aufnahmemodi.",
+      "cs": "Kompaktní dron s kamerou, stabilním letem a automatickými režimy nahrávání."
+    }
+  },
+  {
+    "code": "GW001",
+    "name": "Smartwatch Active",
+    "price": 799.99,
+    "imageUrl": "https://images.unsplash.com/photo-1523275335684-37898b6baf30",
+    "descriptions": {
+      "pl": "Smartwatch z monitorowaniem aktywności, pomiarem tętna i powiadomieniami ze smartfona.",
+      "en": "A smartwatch with activity tracking, heart rate monitoring and smartphone notifications.",
+      "de": "Eine Smartwatch mit Aktivitätsverfolgung, Herzfrequenzmessung und Smartphone-Benachrichtigungen.",
+      "cs": "Chytré hodinky se sledováním aktivity, měřením tepu a notifikacemi ze smartphonu."
+    }
+  },
+  {
+    "code": "RT001",
+    "name": "Wi-Fi 6 Router",
+    "price": 499.99,
+    "imageUrl": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2",
+    "descriptions": {
+      "pl": "Router Wi-Fi 6 zapewniający szybkie i stabilne połączenie w całym domu.",
+      "en": "A Wi-Fi 6 router providing fast and stable connectivity throughout the home.",
+      "de": "Ein Wi-Fi-6-Router für eine schnelle und stabile Verbindung im gesamten Zuhause.",
+      "cs": "Wi-Fi 6 router zajišťující rychlé a stabilní připojení v celé domácnosti."
+    }
+  },
+  {
+    "code": "PR001",
+    "name": "Laser Printer",
+    "price": 699.00,
+    "imageUrl": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6",
+    "descriptions": {
+      "pl": "Drukarka laserowa do domu i biura, oferująca szybki wydruk oraz ekonomiczną eksploatację.",
+      "en": "A laser printer for home and office, offering fast printing and economical operation.",
+      "de": "Ein Laserdrucker für Zuhause und Büro mit schnellem Druck und wirtschaftlichem Betrieb.",
+      "cs": "Laserová tiskárna pro domácnost i kancelář s rychlým tiskem a úsporným provozem."
+    }
+  },
+  {
+    "code": "SC001",
+    "name": "Document Scanner",
+    "price": 549.99,
+    "imageUrl": "https://images.unsplash.com/photo-1581090464777-f3220bbe1b8b",
+    "descriptions": {
+      "pl": "Skaner dokumentów z automatycznym podajnikiem i szybkim skanowaniem do plików PDF.",
+      "en": "A document scanner with automatic feeder and fast scanning to PDF files.",
+      "de": "Ein Dokumentenscanner mit automatischem Einzug und schnellem Scannen in PDF-Dateien.",
+      "cs": "Skener dokumentů s automatickým podavačem a rychlým skenováním do PDF souborů."
+    }
+  },
+  {
+    "code": "MIC001",
+    "name": "USB Microphone",
+    "price": 399.99,
+    "imageUrl": "https://images.unsplash.com/photo-1590602847861-f357a9332bbc",
+    "descriptions": {
+      "pl": "Mikrofon USB do podcastów, streamingu i wideokonferencji z czystym brzmieniem głosu.",
+      "en": "A USB microphone for podcasts, streaming and video calls with clear voice reproduction.",
+      "de": "Ein USB-Mikrofon für Podcasts, Streaming und Videokonferenzen mit klarer Stimmwiedergabe.",
+      "cs": "USB mikrofon pro podcasty, streamování a videohovory s čistým podáním hlasu."
+    }
+  },
+  {
+    "code": "PAD001",
+    "name": "Game Controller",
+    "price": 249.99,
+    "imageUrl": "https://images.unsplash.com/photo-1605901309584-818e25960a8f",
+    "descriptions": {
+      "pl": "Bezprzewodowy kontroler do gier z wygodnym chwytem, precyzyjnymi analogami i niskim opóźnieniem.",
+      "en": "A wireless game controller with comfortable grip, precise analog sticks and low latency.",
+      "de": "Ein kabelloser Gamecontroller mit bequemem Griff, präzisen Analogsticks und geringer Latenz.",
+      "cs": "Bezdrátový herní ovladač s pohodlným úchopem, přesnými analogy a nízkou latencí."
+    }
+  },
+  {
+    "code": "VR001",
+    "name": "VR Headset",
+    "price": 2199.00,
+    "imageUrl": "https://images.unsplash.com/photo-1622979135225-d2ba269cf1ac",
+    "descriptions": {
+      "pl": "Gogle VR do gier i multimediów z szerokim polem widzenia oraz wygodnym systemem mocowania.",
+      "en": "A VR headset for games and multimedia with a wide field of view and comfortable mounting system.",
+      "de": "Ein VR-Headset für Spiele und Multimedia mit großem Sichtfeld und bequemem Befestigungssystem.",
+      "cs": "VR headset pro hry a multimédia se širokým zorným polem a pohodlným uchycením."
+    }
+  },
+  {
+    "code": "PB001",
+    "name": "Power Bank 20000",
+    "price": 189.99,
+    "imageUrl": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5",
+    "descriptions": {
+      "pl": "Power bank 20000 mAh z szybkim ładowaniem i kilkoma portami do ładowania wielu urządzeń.",
+      "en": "A 20000 mAh power bank with fast charging and multiple ports for charging several devices.",
+      "de": "Eine Powerbank mit 20000 mAh, Schnellladefunktion und mehreren Anschlüssen für mehrere Geräte.",
+      "cs": "Powerbanka 20000 mAh s rychlým nabíjením a několika porty pro nabíjení více zařízení."
+    }
+  },
+  {
+    "code": "HUB001",
+    "name": "USB-C Hub",
+    "price": 229.99,
+    "imageUrl": "https://images.unsplash.com/photo-1619953942547-233eab5a70d6",
+    "descriptions": {
+      "pl": "Hub USB-C z portami HDMI, USB i czytnikiem kart, idealny do laptopów ultrabook.",
+      "en": "A USB-C hub with HDMI, USB ports and card reader, ideal for ultrabook laptops.",
+      "de": "Ein USB-C-Hub mit HDMI, USB-Anschlüssen und Kartenleser, ideal für Ultrabooks.",
+      "cs": "USB-C hub s HDMI, USB porty a čtečkou karet, ideální pro ultrabooky."
+    }
+  },
+  {
+    "code": "BL001",
+    "name": "Smart Bulb Set",
+    "price": 149.99,
+    "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827",
+    "descriptions": {
+      "pl": "Zestaw inteligentnych żarówek sterowanych aplikacją, z regulacją jasności i koloru światła.",
+      "en": "A set of smart bulbs controlled by an app, with adjustable brightness and light color.",
+      "de": "Ein Set smarter Glühbirnen mit App-Steuerung, einstellbarer Helligkeit und Lichtfarbe.",
+      "cs": "Sada chytrých žárovek ovládaných aplikací s nastavitelným jasem a barvou světla."
+    }
+  },
+  {
+    "code": "VAC001",
+    "name": "Robot Vacuum",
+    "price": 1599.00,
+    "imageUrl": "https://images.unsplash.com/photo-1527515637462-cff94eecc1ac",
+    "descriptions": {
+      "pl": "Robot sprzątający z mapowaniem pomieszczeń, harmonogramem pracy i automatycznym powrotem do stacji.",
+      "en": "A robot vacuum with room mapping, cleaning schedule and automatic return to the charging station.",
+      "de": "Ein Saugroboter mit Raumkartierung, Reinigungsplan und automatischer Rückkehr zur Ladestation.",
+      "cs": "Robotický vysavač s mapováním místností, plánem úklidu a automatickým návratem do stanice."
+    }
+  },
+  {
+    "code": "COF001",
+    "name": "Coffee Machine",
+    "price": 1899.99,
+    "imageUrl": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6",
+    "descriptions": {
+      "pl": "Automatyczny ekspres do kawy z młynkiem, spieniaczem mleka i programami ulubionych napojów.",
+      "en": "An automatic coffee machine with grinder, milk frother and favorite drink programs.",
+      "de": "Ein Kaffeevollautomat mit Mahlwerk, Milchaufschäumer und Programmen für Lieblingsgetränke.",
+      "cs": "Automatický kávovar s mlýnkem, napěňovačem mléka a programy oblíbených nápojů."
+    }
+  },
+  {
+    "code": "FRY001",
+    "name": "Air Fryer",
+    "price": 399.99,
+    "imageUrl": "https://images.unsplash.com/photo-1625944525533-473f1a3d54e7",
+    "descriptions": {
+      "pl": "Frytkownica beztłuszczowa do szybkiego przygotowywania chrupiących potraw z mniejszą ilością oleju.",
+      "en": "An air fryer for quickly preparing crispy meals with less oil.",
+      "de": "Eine Heißluftfritteuse zur schnellen Zubereitung knuspriger Speisen mit weniger Öl.",
+      "cs": "Horkovzdušná fritéza pro rychlou přípravu křupavých jídel s menším množstvím oleje."
+    }
+  },
+  {
+    "code": "TOA001",
+    "name": "Smart Toaster",
+    "price": 219.99,
+    "imageUrl": "https://images.unsplash.com/photo-1574170608854-cc2a5c7c3f6a",
+    "descriptions": {
+      "pl": "Toster z kilkoma poziomami opiekania, funkcją rozmrażania i kompaktową obudową.",
+      "en": "A toaster with several browning levels, defrost function and compact housing.",
+      "de": "Ein Toaster mit mehreren Bräunungsstufen, Auftaufunktion und kompaktem Gehäuse.",
+      "cs": "Topinkovač s několika stupni opékání, funkcí rozmrazování a kompaktním tělem."
+    }
+  },
+  {
+    "code": "CAM002",
+    "name": "Mirrorless Camera",
+    "price": 4299.00,
+    "imageUrl": "https://images.unsplash.com/photo-1516035069371-29a1b244cc32",
+    "descriptions": {
+      "pl": "Bezlusterkowy aparat fotograficzny z wymienną optyką, szybkim autofokusem i nagrywaniem wideo 4K.",
+      "en": "A mirrorless camera with interchangeable lenses, fast autofocus and 4K video recording.",
+      "de": "Eine spiegellose Kamera mit Wechselobjektiven, schnellem Autofokus und 4K-Videoaufnahme.",
+      "cs": "Bezzrcadlový fotoaparát s výměnnými objektivy, rychlým autofokusem a natáčením videa ve 4K."
+    }
+  },
+  {
+    "code": "NAS001",
+    "name": "Home NAS 2-Bay",
+    "price": 1199.99,
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "descriptions": {
+      "pl": "Domowy serwer NAS z dwiema zatokami na dyski, przeznaczony do kopii zapasowych i przechowywania multimediów.",
+      "en": "A 2-bay home NAS server designed for backups and media storage.",
+      "de": "Ein Heim-NAS mit zwei Laufwerksschächten für Backups und Medienspeicherung.",
+      "cs": "Domácí NAS server se dvěma pozicemi pro disky určený pro zálohy a ukládání médií."
+    }
+  },
+  {
+    "code": "UPS001",
+    "name": "UPS Backup 900VA",
+    "price": 499.00,
+    "imageUrl": "https://images.unsplash.com/photo-1581092160562-40aa08e78837",
+    "descriptions": {
+      "pl": "Zasilacz awaryjny UPS 900VA chroniący komputer i urządzenia sieciowe przed zanikiem zasilania.",
+      "en": "A 900VA UPS backup protecting computers and network devices from power outages.",
+      "de": "Eine 900VA-USV zum Schutz von Computern und Netzwerkgeräten vor Stromausfällen.",
+      "cs": "Záložní zdroj UPS 900VA chránící počítače a síťová zařízení před výpadky proudu."
+    }
+  },
+  {
+    "code": "ETH001",
+    "name": "Ethernet Cable 10m",
+    "price": 39.99,
+    "imageUrl": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+    "descriptions": {
+      "pl": "Przewód Ethernet 10 metrów do stabilnego połączenia sieciowego w domu lub biurze.",
+      "en": "A 10-meter Ethernet cable for stable network connection at home or in the office.",
+      "de": "Ein 10-Meter-Ethernet-Kabel für eine stabile Netzwerkverbindung zu Hause oder im Büro.",
+      "cs": "10metrový ethernetový kabel pro stabilní síťové připojení doma nebo v kanceláři."
+    }
+  },
+  {
+    "code": "BAG001",
+    "name": "Laptop Backpack",
+    "price": 189.99,
+    "imageUrl": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62",
+    "descriptions": {
+      "pl": "Plecak na laptopa z oddzielną komorą, organizerem i wodoodpornym materiałem.",
+      "en": "A laptop backpack with a dedicated compartment, organizer and water-resistant material.",
+      "de": "Ein Laptop-Rucksack mit separatem Fach, Organizer und wasserabweisendem Material.",
+      "cs": "Batoh na notebook se samostatnou přihrádkou, organizérem a voděodolným materiálem."
+    }
+  },
+  {
+    "code": "STN001",
+    "name": "Laptop Stand",
+    "price": 119.99,
+    "imageUrl": "https://images.unsplash.com/photo-1527814050087-3793815479db",
+    "descriptions": {
+      "pl": "Regulowana podstawka pod laptopa poprawiająca ergonomię pracy i wentylację urządzenia.",
+      "en": "An adjustable laptop stand improving work ergonomics and device ventilation.",
+      "de": "Ein verstellbarer Laptopständer für bessere Ergonomie und Belüftung des Geräts.",
+      "cs": "Nastavitelný stojan na notebook zlepšující ergonomii práce a chlazení zařízení."
+    }
+  },
+  {
+    "code": "DOC001",
+    "name": "Docking Station",
+    "price": 649.99,
+    "imageUrl": "https://images.unsplash.com/photo-1619953942547-233eab5a70d6",
+    "descriptions": {
+      "pl": "Stacja dokująca do laptopa z obsługą wielu monitorów, portami USB i zasilaniem przez USB-C.",
+      "en": "A laptop docking station with multi-monitor support, USB ports and USB-C power delivery.",
+      "de": "Eine Laptop-Dockingstation mit Unterstützung für mehrere Monitore, USB-Anschlüssen und USB-C-Stromversorgung.",
+      "cs": "Dokovací stanice pro notebook s podporou více monitorů, USB porty a napájením přes USB-C."
+    }
+  },
+  {
+    "code": "TRK001",
+    "name": "Bluetooth Tracker",
+    "price": 99.99,
+    "imageUrl": "https://images.unsplash.com/photo-1616410011236-7a42121dd981",
+    "descriptions": {
+      "pl": "Lokalizator Bluetooth do kluczy, plecaka lub portfela, pomagający szybko odnaleźć zgubione przedmioty.",
+      "en": "A Bluetooth tracker for keys, backpack or wallet, helping you quickly find misplaced items.",
+      "de": "Ein Bluetooth-Tracker für Schlüssel, Rucksack oder Geldbörse, der beim schnellen Wiederfinden hilft.",
+      "cs": "Bluetooth lokátor na klíče, batoh nebo peněženku, který pomáhá rychle najít ztracené věci."
+    }
+  },
+  {
+    "code": "CAM003",
+    "name": "Indoor Security Camera",
+    "price": 279.99,
+    "imageUrl": "https://images.unsplash.com/photo-1557324232-b8917d3c3dcb",
+    "descriptions": {
+      "pl": "Kamera wewnętrzna do monitoringu domu z detekcją ruchu, trybem nocnym i podglądem z aplikacji.",
+      "en": "An indoor security camera with motion detection, night mode and app live preview.",
+      "de": "Eine Innenraum-Überwachungskamera mit Bewegungserkennung, Nachtmodus und Live-Ansicht per App.",
+      "cs": "Vnitřní bezpečnostní kamera s detekcí pohybu, nočním režimem a živým náhledem v aplikaci."
+    }
+  },
+  {
+    "code": "SND001",
+    "name": "Soundbar 2.1",
+    "price": 999.99,
+    "imageUrl": "https://images.unsplash.com/photo-1545454675-3531b543be5d",
+    "descriptions": {
+      "pl": "Soundbar 2.1 z bezprzewodowym subwooferem, poprawiający jakość dźwięku podczas oglądania filmów.",
+      "en": "A 2.1 soundbar with wireless subwoofer, improving audio quality while watching movies.",
+      "de": "Eine 2.1-Soundbar mit kabellosem Subwoofer für besseren Klang beim Filmeschauen.",
+      "cs": "Soundbar 2.1 s bezdrátovým subwooferem zlepšující kvalitu zvuku při sledování filmů."
+    }
+  },
+  {
+    "code": "CHR001",
+    "name": "Smart Doorbell",
+    "price": 699.99,
+    "imageUrl": "https://images.unsplash.com/photo-1558002038-1055907df827",
+    "descriptions": {
+      "pl": "Inteligentny dzwonek do drzwi z kamerą, powiadomieniami na telefon i komunikacją dwukierunkową.",
+      "en": "A smart doorbell with camera, phone notifications and two-way communication.",
+      "de": "Eine smarte Türklingel mit Kamera, Smartphone-Benachrichtigungen und Zwei-Wege-Kommunikation.",
+      "cs": "Chytrý domovní zvonek s kamerou, notifikacemi do telefonu a obousměrnou komunikací."
+    }
+  },
+  {
+    "code": "KET001",
+    "name": "Smart Kettle",
+    "price": 249.99,
+    "imageUrl": "https://images.unsplash.com/photo-1544787219-7f47ccb76574",
+    "descriptions": {
+      "pl": "Inteligentny czajnik z regulacją temperatury, szybkim gotowaniem i sterowaniem z aplikacji.",
+      "en": "A smart kettle with temperature control, fast boiling and app control.",
+      "de": "Ein smarter Wasserkocher mit Temperaturregelung, schnellem Kochen und App-Steuerung.",
+      "cs": "Chytrá rychlovarná konvice s regulací teploty, rychlým ohřevem a ovládáním přes aplikaci."
+    }
   }
 ]
