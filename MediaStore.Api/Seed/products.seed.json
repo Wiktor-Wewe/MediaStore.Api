@@ -1,0 +1,62 @@
+﻿[
+  {
+    "code": "TV001",
+    "name": "Smart TV 55",
+    "price": 2499.99,
+    "imageUrl": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1",
+    "descriptions": {
+      "pl": "Nowoczesny telewizor Smart TV 55 cali z wysoką jakością obrazu i dostępem do aplikacji streamingowych.",
+      "en": "A modern 55-inch Smart TV with high image quality and access to streaming applications.",
+      "de": "Ein moderner 55-Zoll-Smart-TV mit hoher Bildqualität und Zugriff auf Streaming-Apps.",
+      "cs": "Moderní 55palcová Smart TV s vysokou kvalitou obrazu a přístupem ke streamovacím aplikacím."
+    }
+  },
+  {
+    "code": "PH001",
+    "name": "Smartphone X Pro",
+    "price": 3299.00,
+    "imageUrl": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9",
+    "descriptions": {
+      "pl": "Wydajny smartfon z dużym ekranem, szybkim procesorem i aparatem wysokiej jakości.",
+      "en": "A powerful smartphone with a large display, fast processor and high-quality camera.",
+      "de": "Ein leistungsstarkes Smartphone mit großem Display, schnellem Prozessor und hochwertiger Kamera.",
+      "cs": "Výkonný smartphone s velkým displejem, rychlým procesorem a kvalitním fotoaparátem."
+    }
+  },
+  {
+    "code": "KB001",
+    "name": "Mechanical Keyboard",
+    "price": 349.99,
+    "imageUrl": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+    "descriptions": {
+      "pl": "Klawiatura mechaniczna z podświetleniem i przełącznikami zapewniającymi komfort pisania oraz grania.",
+      "en": "A mechanical keyboard with backlighting and switches designed for comfortable typing and gaming.",
+      "de": "Eine mechanische Tastatur mit Hintergrundbeleuchtung und Schaltern für komfortables Tippen und Gaming.",
+      "cs": "Mechanická klávesnice s podsvícením a spínači pro pohodlné psaní i hraní."
+    }
+  },
+  {
+    "code": "HP001",
+    "name": "Wireless Headphones",
+    "price": 599.00,
+    "imageUrl": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e",
+    "descriptions": {
+      "pl": "Bezprzewodowe słuchawki z redukcją szumów i długim czasem pracy na baterii.",
+      "en": "Wireless headphones with noise cancellation and long battery life.",
+      "de": "Kabellose Kopfhörer mit Geräuschunterdrückung und langer Akkulaufzeit.",
+      "cs": "Bezdrátová sluchátka s potlačením hluku a dlouhou výdrží baterie."
+    }
+  },
+  {
+    "code": "LP001",
+    "name": "Gaming Laptop",
+    "price": 6299.99,
+    "imageUrl": "https://images.unsplash.com/photo-1496181133206-80ce9b88a853",
+    "descriptions": {
+      "pl": "Laptop gamingowy z wydajną kartą graficzną, szybkim dyskiem SSD i ekranem o wysokim odświeżaniu.",
+      "en": "A gaming laptop with a powerful graphics card, fast SSD and high refresh rate display.",
+      "de": "Ein Gaming-Laptop mit leistungsstarker Grafikkarte, schneller SSD und Display mit hoher Bildwiederholrate.",
+      "cs": "Herní notebook s výkonnou grafickou kartou, rychlým SSD a displejem s vysokou obnovovací frekvencí."
+    }
+  }
+]

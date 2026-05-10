@@ -13,6 +13,7 @@ using MediaStore.Api.Features.Products.GetProducts;
 using MediaStore.Api.Infrastructure;
 using MediaStore.Api.Infrastructure.Configuration;
 using MediaStore.Api.Infrastructure.OpenApi;
+using MediaStore.Api.Infrastructure.Persistence.Seed;
 using MediaStore.Api.Infrastructure.Security;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
@@ -30,6 +31,12 @@ builder.Services.AddOpenApi(options =>
 {
     options.AddDocumentTransformer<BearerSecuritySchemeTransformer>();
 });
+
+// db initializer
+builder.Services.Configure<DatabaseInitializerSettings>(
+    builder.Configuration.GetSection("DatabaseInitializer"));
+
+builder.Services.AddTransient<DatabaseInitializer>();
 
 // JWT
 builder.Services.Configure<JwtSettings>(
@@ -79,6 +86,13 @@ builder.Services.AddCors(options =>
 });
 
 var app = builder.Build();
+
+// db initlializer
+using (var scope = app.Services.CreateScope())
+{
+    var initializer = scope.ServiceProvider.GetRequiredService<DatabaseInitializer>();
+    await initializer.InitializeAsync();
+}
 
 if (app.Environment.IsDevelopment())
 {
