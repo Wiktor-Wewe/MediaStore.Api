@@ -20,10 +20,10 @@ public class GetUsersValidator : AbstractValidator<GetUsersRequest>
 
         RuleFor(x => x.SortBy)
             .Must(x => string.IsNullOrWhiteSpace(x) || AllowedSortBy.Contains(x.ToLowerInvariant()))
-            .WithMessage(AuthErrors.InvalidSortBy);
+            .WithMessage(PaginationErrors.InvalidSortBy);
 
         RuleFor(x => x.SortDirection)
             .Must(x => string.IsNullOrWhiteSpace(x) || AllowedSortDirections.Contains(x.ToLowerInvariant()))
-            .WithMessage(AuthErrors.InvalidSortDirection);
+            .WithMessage(PaginationErrors.InvalidSortDirection);
     }
 }

@@ -34,10 +34,10 @@ public class GetProductsValidator : AbstractValidator<GetProductsRequest>
 
         RuleFor(x => x.SortBy)
             .Must(x => string.IsNullOrWhiteSpace(x) || AllowedSortBy.Contains(x.ToLowerInvariant()))
-            .WithMessage(ProductErrors.InvalidSortBy);
+            .WithMessage(PaginationErrors.InvalidSortBy);
 
         RuleFor(x => x.SortDirection)
             .Must(x => string.IsNullOrWhiteSpace(x) || AllowedSortDirections.Contains(x.ToLowerInvariant()))
-            .WithMessage(ProductErrors.InvalidSortDirection);
+            .WithMessage(PaginationErrors.InvalidSortDirection);
     }
 }
