@@ -31,7 +31,8 @@ public static class GetProductDetailsEndpoint
                 product.Descriptions);
 
             return Results.Ok(response);
-        });
+        })
+        .WithTags("Products"); ;
     }
 
     private static string? ResolveDescription(

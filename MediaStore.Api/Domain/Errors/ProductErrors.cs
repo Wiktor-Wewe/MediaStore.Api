@@ -18,4 +18,7 @@ public class ProductErrors
     public const string InvalidMinPrice = "Error.Product.MinPrice.Invalid";
     public const string InvalidMaxPrice = "Error.Product.MaxPrice.Invalid";
     public const string InvalidPriceRange = "Error.Product.PriceRange.Invalid";
+
+    // delete products
+    public const string NotFound = "Error.Product.NotFound";
 }

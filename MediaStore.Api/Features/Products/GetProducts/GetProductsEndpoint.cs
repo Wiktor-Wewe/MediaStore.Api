@@ -37,6 +37,7 @@ public static class GetProductsEndpoint
                 result.TotalCount,
                 totalPages));
         })
-        .AddEndpointFilter<ValidationFilter<GetProductsRequest>>();
+        .AddEndpointFilter<ValidationFilter<GetProductsRequest>>()
+        .WithTags("Products"); ;
     }
 }

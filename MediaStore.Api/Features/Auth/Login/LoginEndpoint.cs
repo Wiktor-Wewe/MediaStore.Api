@@ -36,7 +36,8 @@ public static class LoginEndpoint
             var token = tokenGenerator.Generate(user);
 
             return Results.Ok(new LoginResponse(token));
-        });
+        })
+        .WithTags("Auth");
         // todo add validators?
     }
 }

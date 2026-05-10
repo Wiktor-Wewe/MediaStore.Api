@@ -31,6 +31,7 @@ public static class DeleteUserEndpoint
                         ? StatusCodes.Status404NotFound
                         : StatusCodes.Status409Conflict);
         })
-        .RequireAuthorization("AdminOnly");
+        .RequireAuthorization("AdminOnly")
+        .WithTags("Admin");
     }
 }

@@ -41,6 +41,7 @@ public static class GetUsersEndpoint
                 totalPages));
         })
         .RequireAuthorization("AdminOnly")
-        .AddEndpointFilter<ValidationFilter<GetUsersRequest>>();
+        .AddEndpointFilter<ValidationFilter<GetUsersRequest>>()
+        .WithTags("Admin");
     }
 }

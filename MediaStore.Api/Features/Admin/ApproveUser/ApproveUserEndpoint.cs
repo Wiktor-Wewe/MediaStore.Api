@@ -19,6 +19,7 @@ public static class ApproveUserEndpoint
                 ? Results.NoContent()
                 : result.ToValidationProblem(statusCode: StatusCodes.Status404NotFound);
         })
-        .RequireAuthorization("AdminOnly");
+        .RequireAuthorization("AdminOnly")
+        .WithTags("Admin");
     }
 }

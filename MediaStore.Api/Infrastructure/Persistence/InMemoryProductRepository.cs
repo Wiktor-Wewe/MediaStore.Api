@@ -77,4 +77,16 @@ public class InMemoryProductRepository : IProductRepository
 
         return Task.FromResult(Result.Success());
     }
+
+    public Task<Result> DeleteAsync(Guid id, CancellationToken ct = default)
+    {
+        if (!_products.TryRemove(id, out var removedProduct))
+        {
+            return Task.FromResult(Result.Failure(ProductErrors.NotFound));
+        }
+
+        _codeIndex.TryRemove(removedProduct.Code, out _);
+
+        return Task.FromResult(Result.Success());
+    }
 }

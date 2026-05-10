@@ -39,6 +39,7 @@ public static class RegisterEndpoint
                 ? Results.Accepted()
                 : result.ToValidationProblem();
         })
-        .AddEndpointFilter<ValidationFilter<RegisterRequest>>();
+        .AddEndpointFilter<ValidationFilter<RegisterRequest>>()
+        .WithTags("Auth");
     }
 }

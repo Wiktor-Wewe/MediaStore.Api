@@ -34,6 +34,7 @@ public static class CreateProductEndpoint
                 : result.ToValidationProblem(propertyName: nameof(product.Code));
         })
         .RequireAuthorization("AdminOnly")
-        .AddEndpointFilter<ValidationFilter<CreateProductRequest>>();
+        .AddEndpointFilter<ValidationFilter<CreateProductRequest>>()
+        .WithTags("Products"); ;
     }
 }

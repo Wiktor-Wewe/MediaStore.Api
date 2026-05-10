@@ -14,6 +14,7 @@ public static class GetRegistrationSettingsEndpoint
 
             return Results.Ok(new GetRegistrationSettingsResponse(enabled));
         })
-        .RequireAuthorization("AdminOnly");
+        .RequireAuthorization("AdminOnly")
+        .WithTags("Admin");
     }
 }

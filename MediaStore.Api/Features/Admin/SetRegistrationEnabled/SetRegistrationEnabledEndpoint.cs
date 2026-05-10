@@ -15,6 +15,7 @@ public static class SetRegistrationEnabledEndpoint
 
             return Results.NoContent();
         })
-        .RequireAuthorization("AdminOnly");
+        .RequireAuthorization("AdminOnly")
+        .WithTags("Admin");
     }
 }
