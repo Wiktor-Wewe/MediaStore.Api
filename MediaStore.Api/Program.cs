@@ -7,6 +7,7 @@ using MediaStore.Api.Features.Admin.SetRegistrationEnabled;
 using MediaStore.Api.Features.Auth.Login;
 using MediaStore.Api.Features.Auth.Register;
 using MediaStore.Api.Features.Products.CreateProduct;
+using MediaStore.Api.Features.Products.GetProductDetails;
 using MediaStore.Api.Features.Products.GetProducts;
 using MediaStore.Api.Infrastructure;
 using MediaStore.Api.Infrastructure.Configuration;
@@ -113,6 +114,7 @@ app.MapSetRegistrationEnabled();
 
 app.MapCreateProduct();
 app.MapGetProducts();
+app.MapGetProductDetails();
 
 // run :D
 app.Run();

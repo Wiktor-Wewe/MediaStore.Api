@@ -10,6 +10,9 @@ public class ProductErrors
     public const string NameRequired = "Error.Product.Name.Required";
     public const string NameMaxLength = "Error.Product.Name.MaxLength";
     public const string PriceGreaterThanZero = "Error.Product.Price.GreaterThanZero";
+    public const string ImageUrlInvalid = "Error.Product.ImageUrl.Invalid";
+    public const string DescriptionLanguageInvalid = "Error.Product.Description.Language.Invalid";
+    public const string DescriptionTooLong = "Error.Product.Description.TooLong";
 
     // get products
     public const string InvalidMinPrice = "Error.Product.MinPrice.Invalid";

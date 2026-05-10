@@ -54,6 +54,13 @@ public class InMemoryProductRepository : IProductRepository
         return Task.FromResult(new PagedResult<Product>(items, totalCount));
     }
 
+    public Task<Product?> GetByIdAsync(Guid id, CancellationToken ct = default)
+    {
+        _products.TryGetValue(id, out var product);
+
+        return Task.FromResult(product);
+    }
+
     public Task<Result> AddAsync(Product product, CancellationToken ct)
     {
         // Thread-Safety

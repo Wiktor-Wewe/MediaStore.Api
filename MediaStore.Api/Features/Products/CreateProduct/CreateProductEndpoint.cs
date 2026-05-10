@@ -7,10 +7,25 @@ public static class CreateProductEndpoint
 {
     public static void MapCreateProduct(this IEndpointRouteBuilder app)
     {
-        app.MapPost("/api/products", async (CreateProductRequest req, IProductRepository repo, CancellationToken ct) =>
+        app.MapPost("/api/products", async (
+            CreateProductRequest req,
+            IProductRepository repo,
+            CancellationToken ct) =>
         {
-            var price = req.Price;
-            var product = new Product(Guid.NewGuid(), req.Code!, req.Name!, price);
+            var descriptions = req.Descriptions?
+                .Where(x => !string.IsNullOrWhiteSpace(x.Value))
+                .ToDictionary(
+                    x => x.Key.ToLowerInvariant(),
+                    x => x.Value.Trim())
+                ?? [];
+
+            var product = new Product(
+                Guid.NewGuid(),
+                req.Code.Trim(),
+                req.Name.Trim(),
+                req.Price,
+                string.IsNullOrWhiteSpace(req.ImageUrl) ? null : req.ImageUrl.Trim(),
+                descriptions);
 
             var result = await repo.AddAsync(product, ct);
 
